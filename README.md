@@ -3,6 +3,8 @@ Small DC-motor based balancing robot.
 
 ![picture of bot standing upright](https://user-images.githubusercontent.com/46170/62229378-61ce5080-b374-11e9-9bae-903f8e7f7537.jpg)
 
+[![BalanceBot video](http://img.youtube.com/vi/YxdkzbH74xc/0.jpg)](http://www.youtube.com/watch?v=YxdkzbH74xc "BalanceBot in motion")
+
 Parts:
  - 130-size DC motor (w/ capacitors soldered between wires and case -- this prevents catastrophic amounts of noise on the power supply rail!)
  - Digispark
