@@ -4,14 +4,16 @@ Small DC-motor based balancing robot.
 ![picture of bot standing upright](https://user-images.githubusercontent.com/46170/62229378-61ce5080-b374-11e9-9bae-903f8e7f7537.jpg)
 
 Parts:
- - 130-size DC motor
+ - 130-size DC motor (w/ capacitors soldered between wires and case -- this prevents catastrophic amounts of noise on the power supply rail!)
  - Digispark
  - Digispark motor shield
  - Adaboost LiPo battery charger
  - LiPo battery
  - MPU-9250 accelerometer/gyro/compass (compass not used, MPU-6050 would also work)
  - 3D printed frame, wheels+axle+spur gear, pinion gear
- 
+ - rubber bands for tires
+ - M2.5 screws for the PCBs and servo tape to hold on the battery / power switch
+
 ![3d parts](https://user-images.githubusercontent.com/46170/62230263-51b77080-b376-11e9-8613-e106cb508b14.jpg)
 
 This is all stuff I had on hand; if I were to design it around parts which can be bought new, I would do
