@@ -1,7 +1,7 @@
 # balancebot
 Small DC-motor based balancing robot.
 
-![IMG_20190731_091730](https://user-images.githubusercontent.com/46170/62229378-61ce5080-b374-11e9-9bae-903f8e7f7537.jpg)
+![picture of bot standing upright](https://user-images.githubusercontent.com/46170/62229378-61ce5080-b374-11e9-9bae-903f8e7f7537.jpg)
 
 Parts:
  - 130-size DC motor
@@ -12,6 +12,8 @@ Parts:
  - MPU-9250 accelerometer/gyro/compass (compass not used, MPU-6050 would also work)
  - 3D printed frame, wheels+axle+spur gear, pinion gear
  
+![3d parts](https://user-images.githubusercontent.com/46170/62230263-51b77080-b376-11e9-8613-e106cb508b14.jpg)
+
 This is all stuff I had on hand; if I were to design it around parts which can be bought new, I would do
 it differently. There are better/cheaper microcontroller boards w/ integrated charging, ARM CPU, more IO for example.
 
