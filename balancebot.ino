@@ -1,6 +1,4 @@
 #include <Wire.h>
-#include <DigiUSB.h>
-#include <math.h>
 
 static const int MotorDir = 5;
 static const int MotorSpeed = 1;
@@ -76,7 +74,7 @@ void loop() {
   // use complementary filter to compute angle
   int32_t angle = 0;
   int32_t xsum = 0;
-  int32_t u;
+  int32_t u = 0, dxsum = 0;
   uint16_t n_ = 0;
   for (;;) {
     unsigned long t0 = millis();
@@ -93,13 +91,13 @@ void loop() {
 
     // don't attempt to drive if we're already tipped over
     if (angle > -74000 && angle < 74000) {
-      int32_t anglecg = 9000 - (xsum);
+      int32_t anglecg = 9000 - (xsum<<2) + (dxsum << 4);
       u = ((angle - anglecg) >> 5) + (gy >> 5);
       if (u > 255) u = 255;
       if (u < -255) u = -255;
-      
-      xsum += u;
-      xsum -= xsum >> 7;
+
+      dxsum = u - (xsum >> 7);
+      xsum += dxsum;
       
       uint16_t sp = (u < 0 ? -u : u);
       digitalWrite(MotorDir, u<0 ? 0 : 1);
